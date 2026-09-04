@@ -33,7 +33,7 @@ export async function POST(req: Request) {
         user_id: userId,
         therapist_id: therapistId,
         payment_intent_id: session.payment_intent as string,
-      });
+      } as never);
 
       if (error) {
         console.error('Supabase Insert Error:', error);
